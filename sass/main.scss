@@ -1,0 +1,32 @@
+/*
+Theme Name: Firestarter
+Theme URI: https://jonathandueck.com/dev/projects
+Author: Jonathan Dueck
+Author URI: https://jonathandueck.com/
+Description: Sass-enabled boilerplate for a WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: firestarter
+Tags:
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/sidebar";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";

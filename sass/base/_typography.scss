@@ -1,0 +1,31 @@
+a {
+  text-decoration: none;
+}
+
+// Fonts
+.fa {
+  font-size: 30px;
+  display: block;
+  position: relative;
+  padding-left: 29px;
+  margin-bottom: 20px;
+  &:hover {
+    animation:iconPop 0.8s;  }
+}
+
+.nav-icon {
+
+}
+
+.link-icon {
+  position: relative;
+  z-index: 20;
+  &:hover {
+    transform-origin: 75% 50%;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Belgrano', serif;
+}
