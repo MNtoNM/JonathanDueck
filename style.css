@@ -59,7 +59,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg); } }
-
 a {
   text-decoration: none; }
 
@@ -87,6 +86,24 @@ h1 {
   width: 100%;
   margin-bottom: 80px 0; }
 
+.form-component {
+  width: 750px;
+  opacity: 0.8;
+  border-radius: 3px;
+  background-color: #fff;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 5%; }
+
+.contact-form {
+  display: block;
+  max-width: 75%; }
+
+.form-field {
+  width: 80%;
+  margin-bottom: 20px; }
+
 .sidebar {
   display: inline-block;
   width: 90px;
@@ -104,8 +121,8 @@ h1 {
     border-radius: 50%;
     border: 2px solid white;
     margin-left: 8%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 70px; }
 
 .social-icons {
@@ -131,3 +148,5 @@ body {
   padding: 0;
   font-family: 'Belgrano', serif;
   background-color: gray; }
+
+/*# sourceMappingURL=style.css.map */
