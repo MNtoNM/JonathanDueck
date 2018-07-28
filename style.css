@@ -32,33 +32,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -moz-transform: scale(1);
     -o-transform: scale(1); }
   30% {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: rotate(25deg);
-    -webkit-transform: rotate(25deg);
-    -moz-transform: rotate(25deg);
-    -o-transform: rotate(25deg); }
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6); }
   60% {
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    font-size: 90px;
-    transform: rotate(-25deg);
-    -webkit-transform: rotate(-25deg);
-    -moz-transform: rotate(-25deg);
-    -o-transform: rotate(-25deg); }
+    -o-transform: scale(1.5); }
   90% {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg); } }
+    -o-transform: scale(1.1); } }
+@keyframes contactSlide {
+  0% {
+    transform: translate(-205px, 500px); }
+  90% {
+    transform: translate(-205px, -50px); }
+  100% {
+    transform: translate(-205px, 0); } }
 a {
   text-decoration: none; }
 
@@ -69,7 +63,9 @@ a {
   padding-left: 29px;
   margin-bottom: 20px; }
   .fa:hover {
-    animation: iconPop 0.8s; }
+    animation: iconPop 0.5s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
 
 .link-icon {
   position: relative;
@@ -81,7 +77,8 @@ h1 {
   text-align: center;
   font-family: 'Belgrano', serif;
   font-size: 52px;
-  color: #fff; }
+  color: #fff;
+  letter-spacing: 0.15em; }
 
 .medium-space {
   display: block;
@@ -108,10 +105,16 @@ h1 {
     box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.15); }
 
 .contact-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   display: block;
   max-width: 75%;
-  margin-left: 50%;
-  transform: translateX(calc(-50% + 100px)); }
+  animation: contactSlide 600ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards; }
 
 .field {
   width: 400px;

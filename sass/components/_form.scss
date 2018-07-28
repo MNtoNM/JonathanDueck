@@ -1,8 +1,17 @@
 .contact-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+
   display: block;
   max-width: 75%;
-  margin-left: 50%;
-  transform: translateX(calc(-50% + 100px));
+  animation: contactSlide 600ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards;
+  // transform: translateX(calc(-50% + 100px));
+  // margin-left: 50%;
 }
 
 .field {

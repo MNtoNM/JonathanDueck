@@ -10,7 +10,11 @@ a {
   padding-left: 29px;
   margin-bottom: 20px;
   &:hover {
-    animation:iconPop 0.8s;  }
+    animation:iconPop 0.5s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+
+  }
 }
 
 .nav-icon {
@@ -30,4 +34,5 @@ h1 {
   font-family: 'Belgrano', serif;
   font-size: 52px;
   color: $color-white;
+  letter-spacing: 0.15em;
 }
