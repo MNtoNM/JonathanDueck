@@ -2,15 +2,17 @@
 
 <?php get_template_part('template-parts/sidebar'); ?>
 
-<div class="medium-space"></div>
 
+<div class="bg-image">
+  <div class="medium-space"></div>
   <h1>CONTACT</h1>
+  <div class="medium-space"></div>
 
-<div class="form-component"
   <form class="contact-form">
-    <input class="form-field" type="text" placeholder="Your Name" /><br />
-    <input class="form-field" type="email" placeholder="Email Address" /><br />
-    <textarea class="form-field" placeholder="Hey Jon! ..."></textarea>
+    <input class="field field__standard" type="text" autocomplete="name" placeholder="Your Name" /><br />
+    <input class="field field__standard" type="email" autocomplete="email" placeholder="Email Address" /><br />
+    <textarea class="field field__textarea" placeholder="Hey Jon! ..."></textarea><br />
+    <button type="submit" name="button" class="btn">Submit</button>
   </form>
 </div>
 

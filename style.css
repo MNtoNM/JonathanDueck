@@ -79,30 +79,50 @@ a {
 
 h1 {
   text-align: center;
-  font-family: 'Belgrano', serif; }
+  font-family: 'Belgrano', serif;
+  font-size: 52px;
+  color: #fff; }
 
 .medium-space {
   display: block;
   width: 100%;
-  margin-bottom: 80px 0; }
+  padding-bottom: 80px; }
 
-.form-component {
-  width: 750px;
-  opacity: 0.8;
+.big-space {
+  display: block;
+  width: 100%;
+  padding-bottom: 160px; }
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: purple;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.15);
+  color: #fff;
   border-radius: 3px;
-  background-color: #fff;
-  position: absolute;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  padding: 5%; }
+  transition: all 320ms;
+  /* Transition property goes on the initial state */ }
+  .btn:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.15); }
 
 .contact-form {
   display: block;
-  max-width: 75%; }
+  max-width: 75%;
+  margin-left: 50%;
+  transform: translateX(calc(-50% + 100px)); }
 
-.form-field {
-  width: 80%;
-  margin-bottom: 20px; }
+.field {
+  width: 400px;
+  margin-bottom: 20px;
+  opacity: 1;
+  padding-left: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45); }
+  .field__standard {
+    height: 2rem; }
+  .field__textarea {
+    height: 80px; }
 
 .sidebar {
   display: inline-block;
@@ -142,6 +162,16 @@ h1 {
 
 .hide {
   display: none; }
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin-top: -150px;
+  position: fixed;
+  z-index: -10;
+  padding: 80px 0;
+  background: url("assets/images/macbook-keyboard-still-min.png"); }
 
 body {
   margin: 0;

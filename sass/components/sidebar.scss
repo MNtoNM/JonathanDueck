@@ -3,15 +3,15 @@
   width: 90px;
   height: 100vh;
   background-color: purple;
-  color: #fff;
+  color: $color-white;
   position: absolute;
   top: 0;
   float: left;
 
   a {
-    color: #eee;
+    color: $color-light-grey;
     &:hover {
-      color:#fff;
+      color: $color-white;
     }
   }
 

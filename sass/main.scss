@@ -22,6 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/button";
 @import "components/form";
 @import "components/sidebar";
 
@@ -30,4 +31,5 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "layout/header";
 @import "layout/navigation";
 
+@import "pages/contact";
 @import "pages/home";
