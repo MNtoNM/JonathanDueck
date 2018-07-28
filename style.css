@@ -49,7 +49,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @keyframes contactSlide {
   0% {
     transform: translate(-205px, 500px); }
-  90% {
+  30% {
     transform: translate(-205px, -50px); }
   100% {
     transform: translate(-205px, 0); } }
