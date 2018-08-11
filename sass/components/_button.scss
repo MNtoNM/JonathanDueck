@@ -1,12 +1,24 @@
 .btn {
-  padding: 10px 20px;
-  font-size: 18px;
-  // border: 1px solid $color-black;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  border: 1px solid $color-white;
   background-color: purple;
   box-shadow: 1px 2px rgba($color-black, .15);
   color: $color-white;
   border-radius: 3px;
   transition: all 320ms; /* Transition property goes on the initial state */
+  display: inline-block;
+  margin: 0 5px;
+
+
+  &-group {
+    text-align: center;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    @include clearfix;
+  }
 
   &:hover {
     background-color: $color-white;

@@ -1,1 +1,1 @@
-<h1>BLOG TEMPLATE</h1>
+<h1>root index.php</h1>

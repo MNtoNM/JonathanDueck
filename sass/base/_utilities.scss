@@ -1,11 +1,16 @@
-.medium-space {
+.vertical-space {
   display: block;
   width: 100%;
-  padding-bottom: 80px;
-}
 
-.big-space {
-  display: block;
-  width: 100%;
-  padding-bottom: 160px;
+  &-small {
+    padding-bottom: 4rem;
+  }
+
+  &-medium {
+    padding-bottom: 8rem;
+  }
+
+  &-big {
+    padding-bottom: 16rem;
+  }
 }

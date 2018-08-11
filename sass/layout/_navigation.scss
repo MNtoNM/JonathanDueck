@@ -1,0 +1,28 @@
+// Fonts
+.fa {
+  font-size: 3rem;
+  display: block;
+  position: relative;
+  padding-left: 2.9rem;
+  margin-bottom: 2rem;
+  z-index: 50;
+  &:hover {
+    animation:iconPop 0.5s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+
+  }
+}
+
+.link-icon {
+  position: relative;
+  z-index: 20;
+  &:hover {
+    transform-origin: 75% 50%;
+  }
+}
+
+.sidebar__headshot {
+  position: relative;
+  z-index: 20;
+}

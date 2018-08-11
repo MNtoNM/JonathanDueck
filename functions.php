@@ -2,6 +2,8 @@
 
 require get_theme_file_path('/inc/enqueue.php');
 require get_theme_file_path('/inc/register-rest-field.php');
+require get_theme_file_path('/inc/project-cpt.php');
+require get_theme_file_path('/inc/technologies-taxonomy.php');
 
 // function firestarter_features() {
   // register_nav_menu('headerMenuLocation', 'Header Menu Location'); Add WP Menus
