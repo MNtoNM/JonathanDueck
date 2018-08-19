@@ -271,10 +271,6 @@ form span {
     margin-bottom: 1.5rem;
     width: 7rem; }
 
-.social {
-  margin-left: 4rem;
-  padding-top: 3px; }
-
 .social-icons {
   position: absolute; }
 
@@ -322,26 +318,22 @@ form span {
   .link-icon:hover {
     transform-origin: 75% 50%; }
 
-.sidebar__headshot {
-  position: relative;
-  z-index: 20; }
-
 .tooltip {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   font-size: 2rem;
   transition: opacity 0.3s 0.4s;
   background-color: #303030;
   padding: 1rem;
   border-radius: 2px;
-  box-shadow: 2px 4px 6px rgba(48, 48, 48, 0.85); }
+  box-shadow: 2px 4px 6px rgba(48, 48, 48, 0.85);
+  left: 9.5rem;
+  margin-top: -5rem; }
 
 .fa:hover + .tooltip {
   visibility: visible;
-  opacity: 1;
-  left: 110%;
-  margin-top: -5rem; }
+  opacity: 1; }
 
 .blog__container {
   max-width: 80rem;

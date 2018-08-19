@@ -17,13 +17,5 @@
     <a class="btn btn-center" href="/contact">Contact</a>
   </div>
 
-  <!-- <div class="bg-video">
-    <video class= "bg-video__content" autoplay muted loop>
-      <source src="<?php echo get_template_directory_uri() . '/assets/videos/macbook.mp4'?>" type="video/mp4">
-    </video>
-  </div> -->
-
-
-
 </div>
 <?php get_footer(); ?>
