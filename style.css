@@ -148,7 +148,7 @@ h2 {
       display: block;
       margin-bottom: 2rem; } }
   .btn-group {
-    margin-left: calc(50%);
+    margin-left: calc(50% + 3.7rem);
     transform: translateX(-50%);
     text-align: center;
     position: relative;
