@@ -2,12 +2,19 @@ a {
   text-decoration: none;
 }
 
-
-
 h1 {
   text-align: center;
   font-family: 'Belgrano', serif;
-  font-size: 5.2rem;
+  font-size: 4rem;
   color: $color-white;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  text-align: left;
+  font-family: 'Belgrano', serif;
+  font-size: 3rem;
+  color: $color-white;
+  letter-spacing: 0.05em;
 }

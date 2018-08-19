@@ -1,6 +1,6 @@
 .project-tile {
   // padding: 2rem;
-  // max-width: 10px;
+  max-width: 50rem;
   // max-height: 10px;
   // position: relative;
   // z-index: 500;
@@ -9,7 +9,7 @@
   border-radius: 2rem;
   box-shadow: 0px 4px 6px rgba($color-black, .45);
   &:hover {
-    animation:tile Pop 0.5s;
+    animation:tilePop 0.5s;
     animation-fill-mode: forwards;
     backface-visibility: hidden;
   }

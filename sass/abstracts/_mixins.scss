@@ -5,3 +5,28 @@
     clear: both;
   }
 }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content }; // 600 px divided by 16 (px)
+    // use ems for media queries. 1em = page default font size (usually 16px)
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) and (min-width: 37.6em) { @content }; // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) and (min-width: 56.26em) { @content }; // 1200px
+  }
+  // @if $breakpoint == big-desktop {
+  //   @media (min-width: 112.5em) { @content }; // 1800px
+  // }
+}
+
+
+
+@mixin fauxCenter() {
+  // position: relative;
+  margin-left: calc(50%);
+  transform: translateX(-50%);
+  width: 100%;
+}

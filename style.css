@@ -11,20 +11,6 @@ Text Domain: firestarter
 Tags:
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-.bg-video {
-  max-width: 100vw;
-  position: fixed;
-  z-index: -500;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  display: inline-block; }
-  .bg-video__content {
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.15; }
-
 @keyframes iconPop {
   0% {
     transform: scale(1);
@@ -46,27 +32,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1); } }
+
 @keyframes tilePop {
   0% {
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -o-transform: scale(1); }
-  30% {
-    transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95); }
-  60% {
+  20% {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1); }
-  90% {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1); } }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1); } }
+
 @keyframes contactSlide {
   0% {
     transform: translate(0px, 500px); }
@@ -74,6 +57,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     transform: translate(0px, -50px); }
   100% {
     transform: translate(0px, 0); } }
+
 @keyframes hover {
   0% {
     transform: translateY(-7px); }
@@ -81,18 +65,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
     transform: translateY(7px); }
   100% {
     transform: translateY(-7px); } }
+
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   88% {
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(1);
+    -webkit-transform: scale(1); }
   93% {
-    opacity: 1;
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2); }
   100% {
-    opacity: 1;
-    transform: scale(1); } }
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
 *,
 ::after,
 ::before {
@@ -101,11 +88,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
   box-sizing: inherit; }
 
 html {
+  font-size: 62.5%;
+  padding-top: 0;
   font-size: 62.5%; }
+  @media (max-width: 75em) and (min-width: 56.26em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) and (min-width: 37.6em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
-  /* Borders and paddings are no longer part of element heights/widths */ }
+  /* Borders and paddings are no longer part of element heights/widths */
+  overflow-x: hidden; }
 
 a {
   text-decoration: none; }
@@ -113,9 +109,17 @@ a {
 h1 {
   text-align: center;
   font-family: 'Belgrano', serif;
-  font-size: 5.2rem;
+  font-size: 4rem;
   color: #fff;
-  letter-spacing: 0.15em; }
+  letter-spacing: 0.05em;
+  padding-bottom: 2rem; }
+
+h2 {
+  text-align: left;
+  font-family: 'Belgrano', serif;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 0.05em; }
 
 .vertical-space {
   display: block;
@@ -132,51 +136,72 @@ h1 {
   font-size: 1.8rem;
   border: 1px solid #fff;
   background-color: purple;
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px rgba(48, 48, 48, 0.15);
   color: #fff;
   border-radius: 3px;
   transition: all 320ms;
   /* Transition property goes on the initial state */
   display: inline-block;
   margin: 0 5px; }
+  @media (max-width: 37.5em) {
+    .btn {
+      display: block;
+      margin-bottom: 2rem; } }
   .btn-group {
+    margin-left: calc(50%);
+    transform: translateX(-50%);
     text-align: center;
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
     float: left; }
     .btn-group::after {
       content: "";
       display: table;
       clear: both; }
+    @media (max-width: 37.5em) {
+      .btn-group {
+        margin-top: 2rem; } }
   .btn:hover {
     background-color: #fff;
-    color: #000;
-    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.15); }
+    color: #303030;
+    box-shadow: 2px 4px 20px rgba(48, 48, 48, 0.15); }
 
 .contact-form {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  top: 35%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-left: calc(50% + 5rem);
   display: block;
   max-width: 75%; }
+  @media (max-width: 37.5em) {
+    .contact-form {
+      top: 30%; } }
 
 .field {
-  width: 40rem;
-  margin-bottom: 2rem;
+  min-width: 50rem;
+  margin-bottom: 4rem;
+  margin: 0 auto;
   padding-left: 1rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 4px 12px rgba(48, 48, 48, 0.45);
   border-radius: 5px; }
+  @media (max-width: 37.5em) {
+    .field {
+      width: 30rem;
+      margin-bottom: 1rem; } }
+  @media (max-width: 56.25em) and (min-width: 37.6em) {
+    .field {
+      min-width: 40rem;
+      margin-bottom: 1rem; } }
+  @media (max-width: 75em) and (min-width: 56.26em) {
+    .field {
+      margin-bottom: 2rem;
+      min-width: 50rem; } }
   .field__standard {
     height: 5rem; }
     .field__standard--name {
       animation: 400ms ease .4s 1 normal both contactSlide; }
     .field__standard--email {
       animation: 800ms ease 0.6s 1 normal both contactSlide; }
-    .field__standard--challenge {
-      width: 5rem; }
   .field__textarea {
     height: 8rem;
     animation: 1200ms ease 0.8s 1 normal both contactSlide;
@@ -210,15 +235,30 @@ h1 {
 form span {
   color: red; }
 
+.contact__challenge {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  box-shadow: 0px 4px 12px rgba(48, 48, 48, 0.45);
+  border-radius: 5px;
+  height: 5rem;
+  width: 5rem; }
+
+.faux-center {
+  position: relative;
+  margin-left: calc(50% + 3.5rem);
+  transform: translateX(-50%); }
+
 .sidebar {
-  display: inline-block;
+  display: block;
   width: 9rem;
-  height: 100vh;
+  min-height: 200vh;
+  height: 100%;
   background-color: purple;
   color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
-  float: left; }
+  left: 0;
+  overflow: hidden; }
   .sidebar a {
     color: #eee; }
     .sidebar a:hover {
@@ -231,23 +271,12 @@ form span {
     margin-bottom: 1.5rem;
     width: 7rem; }
 
+.social {
+  margin-left: 4rem;
+  padding-top: 3px; }
+
 .social-icons {
-  position: absolute;
-  bottom: 8rem; }
-
-.icon-bubble {
-  width: 20rem;
-  height: 10rem;
-  border-radius: 4rem;
-  margin-left: 10rem;
-  padding: 2rem 4rem;
-  color: white;
-  background-color: purple;
-  -webkit-clip-path: polygon(19% 0, 100% 6%, 100% 100%, 21% 93%, 19% 64%, 0 62%, 19% 45%);
-  clip-path: polygon(19% 0, 100% 6%, 100% 100%, 21% 93%, 19% 64%, 0 62%, 19% 45%); }
-
-.hide {
-  display: none; }
+  position: absolute; }
 
 .row {
   max-width: 114rem;
@@ -281,7 +310,7 @@ form span {
   position: relative;
   padding-left: 2.9rem;
   margin-bottom: 2rem;
-  z-index: 50; }
+  z-index: 505; }
   .fa:hover {
     animation: iconPop 0.5s;
     animation-fill-mode: forwards;
@@ -297,15 +326,77 @@ form span {
   position: relative;
   z-index: 20; }
 
+.tooltip {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 2rem;
+  transition: opacity 0.3s 0.4s;
+  background-color: #303030;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 2px 4px 6px rgba(48, 48, 48, 0.85); }
+
+.fa:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
+  left: 110%;
+  margin-top: -5rem; }
+
+.blog__container {
+  max-width: 80rem;
+  margin: 0 auto;
+  color: #303030;
+  background-color: transparent;
+  overflow-y: scroll; }
+
+.blog__post {
+  margin: 2rem 0 .5rem;
+  background-color: #fff;
+  padding: 4rem;
+  opacity: 0.9;
+  border-radius: 4px; }
+
+.blog__title {
+  color: #303030;
+  font-weight: bold;
+  margin-bottom: 1rem; }
+  .blog__title a {
+    color: #303030; }
+    .blog__title a:hover {
+      color: #7e0f7e; }
+
+.blog__content {
+  font-size: 1.5rem;
+  padding-bottom: 2rem; }
+
+.blog__meta {
+  color: #303030;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase; }
+  .blog__meta--top {
+    text-align: right;
+    border-bottom: 1px solid #eee;
+    padding-right: 3rem; }
+  .blog__meta--bottom {
+    border-top: 1px solid #eee;
+    padding-top: 1rem; }
+
+.return-to-blog {
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+  top: 1rem; }
+
 .bg-image {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
+  width: 100%;
   margin-top: -20rem;
   position: fixed;
   top: 10rem;
   z-index: -10;
-  padding: 8rem 0;
+  padding: 14rem 0 50rem 0;
   background: url("assets/images/macbook-keyboard-still-min.png"); }
 
 .right {
@@ -319,29 +410,66 @@ body {
 
 .container {
   position: relative;
-  padding-top: 10%; }
+  padding-top: 10%;
+  z-index: -300; }
 
 .home {
   color: #fff;
   font-family: 'Belgrano';
   position: relative; }
   .home__headline {
+    margin-left: 5rem;
     text-align: center;
+    width: 100%;
     font-size: 10rem;
     position: relative;
     animation: fadeIn 2s 0.3s backwards; }
+    @media (max-width: 37.5em) {
+      .home__headline {
+        font-size: 4rem; } }
+    @media (max-width: 56.25em) and (min-width: 37.6em) {
+      .home__headline {
+        font-size: 8rem; } }
+    @media (max-width: 75em) and (min-width: 56.26em) {
+      .home__headline {
+        font-size: 6rem; } }
   .home__subheadline {
+    margin-left: 5rem;
+    width: 100%;
     font-size: 6rem;
     text-align: center;
-    animation: fadeIn 2.5s 0.2s backwards; }
+    animation: fadeIn 2.5s 0.4s backwards; }
+    @media (max-width: 37.5em) {
+      .home__subheadline {
+        font-size: 2rem; } }
+    @media (max-width: 56.25em) and (min-width: 37.6em) {
+      .home__subheadline {
+        font-size: 3rem; } }
+    @media (max-width: 75em) and (min-width: 56.26em) {
+      .home__subheadline {
+        font-size: 5rem; } }
+
+video {
+  position: absolute;
+  z-index: -500;
+  min-width: 150rem;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3; }
 
 .project-tile {
+  max-width: 50rem;
   position: relative;
   display: inline-block;
   border-radius: 2rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.45); }
+  box-shadow: 0px 4px 6px rgba(48, 48, 48, 0.45); }
   .project-tile:hover {
-    animation: tile Pop 0.5s;
+    animation: tilePop 0.5s;
     animation-fill-mode: forwards;
     backface-visibility: hidden; }
 
@@ -350,5 +478,3 @@ body {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 5rem; }
-
-/*# sourceMappingURL=style.css.map */

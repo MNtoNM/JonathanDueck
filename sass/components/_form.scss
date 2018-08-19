@@ -1,9 +1,10 @@
 .contact-form {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  top: 35%;
+  // left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-left: calc(50% + 5rem;);
 
   display: block;
   max-width: 75%;
@@ -12,16 +13,32 @@
   // animation-fill-mode: backwards;
   // transform: translateX(calc(-50% + 100px));
   // margin-left: 50%;
+  @include respond(phone) {
+    top: 30%;
+  }
 }
 
 .field {
-  width: 40rem;
-  margin-bottom: 2rem;
+  min-width: 50rem;
+  margin-bottom: 4rem;
+  margin: 0 auto;
   padding-left: 1rem;
   box-shadow: 0px 4px 12px rgba($color-black, .45);
   border-radius: 5px;
+  @include respond(phone) {
+    width: 30rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(tab-port) {
+    min-width: 40rem;
+    margin-bottom: 1rem;
 
-  &__standard{
+  }
+  @include respond(tab-land) {
+    margin-bottom: 2rem;
+    min-width: 50rem;
+  }
+  &__standard {
     height: 5rem;
 
     &--name {
@@ -30,11 +47,9 @@
     &--email {
       animation: 800ms ease 0.6s 1 normal both contactSlide;
     }
-    &--challenge {
-      width: 5rem;
-
-    }
   }
+
+
   &__textarea {
     height: 8rem;
     animation:  1200ms ease 0.8s 1 normal both contactSlide;
@@ -76,4 +91,19 @@
 
 form span{
   color: red;
+}
+
+.contact__challenge {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  box-shadow: 0px 4px 12px rgba($color-black, .45);
+  border-radius: 5px;
+  height: 5rem;
+  width: 5rem;
+}
+
+.faux-center {
+  position: relative;
+  margin-left: calc(50% + 3.5rem);
+  transform: translateX(-50%);
 }

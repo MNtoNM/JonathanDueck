@@ -5,12 +5,11 @@
   position: relative;
   padding-left: 2.9rem;
   margin-bottom: 2rem;
-  z-index: 50;
+  z-index: 505;
   &:hover {
     animation:iconPop 0.5s;
     animation-fill-mode: forwards;
     backface-visibility: hidden;
-
   }
 }
 
@@ -25,4 +24,23 @@
 .sidebar__headshot {
   position: relative;
   z-index: 20;
+}
+
+.tooltip {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 2rem;
+  transition: opacity 0.3s 0.4s;
+  background-color: $color-black;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 2px 4px 6px rgba($color-black, .85);
+}
+
+.fa:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
+  left: 110%;
+  margin-top: -5rem;
 }

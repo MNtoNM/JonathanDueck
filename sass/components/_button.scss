@@ -10,14 +10,27 @@
   display: inline-block;
   margin: 0 5px;
 
+  @include respond(phone) {
+    display: block;
+    margin-bottom: 2rem;
+  }
 
   &-group {
+    margin-left: calc(50%);
+    transform: translateX(-50%);
+
     text-align: center;
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    // width: 50%;
+    // margin-left: 50%;
+    // transform: translateX(-50%);
     float: left;
     @include clearfix;
+    // @include fauxCenter;
+
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
   }
 
   &:hover {

@@ -71,8 +71,8 @@
 
 
 <div class="bg-image">
-  <div class="vertical-space-medium"></div>
-  <h1>CONTACT</h1>
+
+  <h1 class="faux-center">CONTACT</h1>
 
   <?php echo $response; ?>
   <form class="contact-form" action="<?php the_permalink(); ?>" method="post">
@@ -103,7 +103,7 @@
 
     <div class="challenge__row">
       <p class="challenge__text">
-        <label for="message_human">Human Verification: <span>*</span> <br><input type="text" class="field field__standard field__standard--challenge" name="message_human"> + 3 = 5</label>
+        <label for="message_human">Human Verification: <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
       </p>
 
       <button
@@ -117,9 +117,7 @@
     <input type="hidden" name="submitted" value="1">
 
   </form>
-  <div class="vertical-space-big"></div>
-  <div class="vertical-space-big"></div>
-  <div class="vertical-space-big"></div>
+
 </div>
 
 

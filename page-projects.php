@@ -21,7 +21,10 @@
         $query -> the_post(); ?>
 
           <div class="col-1-of-3">
-              <a href="/projects/<?php echo get_the_ID(); ?>"><?php the_post_thumbnail( $size="medium", array('class' => 'project-tile')); ?></a>
+              <!-- <a href="/projects/<?php //echo get_the_id(); ?>"> -->
+              <a href="<?php echo get_permalink( $id = 0, $leavename = false ) ?>">
+                <?php the_post_thumbnail( $size="medium", array('class' => 'project-tile', 'data-id' => 'post-' . get_the_id() )); ?>
+              </a>
           </div>
 
       <?php
