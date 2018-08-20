@@ -103,7 +103,7 @@
 
     <div class="challenge__row">
       <p class="challenge__text">
-        <label for="message_human">Human Verification: <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
+        <label for="message_human">Human? <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
       </p>
 
       <button

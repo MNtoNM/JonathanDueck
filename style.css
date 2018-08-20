@@ -179,15 +179,14 @@ h2 {
 
 .field {
   min-width: 50rem;
-  margin-bottom: 4rem;
   margin: 0 auto;
   padding-left: 1rem;
   box-shadow: 0px 4px 12px rgba(48, 48, 48, 0.45);
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 2rem; }
   @media (max-width: 37.5em) {
     .field {
-      width: 30rem;
-      margin-bottom: 1rem; } }
+      min-width: 30rem; } }
   @media (max-width: 56.25em) and (min-width: 37.6em) {
     .field {
       min-width: 40rem;
@@ -208,7 +207,8 @@ h2 {
     padding: 1rem; }
 
 .btn-raise {
-  animation: 1400ms ease 1s 1 normal both contactSlide; }
+  animation: 1400ms ease 1s 1 normal both contactSlide;
+  top: 0.5rem; }
 
 .challenge__row {
   margin-left: 40%;
@@ -219,18 +219,50 @@ h2 {
   font-size: 2rem;
   animation: 1s ease 0.7s normal both contactSlide;
   display: inline-block; }
+  @media (max-width: 37.5em) {
+    .challenge__text {
+      position: relative;
+      display: inline; } }
 
 .error {
+  font-size: 4rem;
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  margin-left: calc(50% + 5rem);
+  margin-bottom: 18rem;
+  transform: translateX(-50%);
   padding: 5px 9px;
   border: 1px solid red;
   color: red;
-  border-radius: 3px; }
+  background-color: #fff;
+  border-radius: 3px;
+  display: block; }
+  @media (max-width: 37.5em) {
+    .error {
+      font-size: 1.5rem; } }
 
 .success {
   padding: 5px 9px;
   border: 1px solid green;
   color: green;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-size: 4rem;
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  margin-left: calc(50% + 5rem);
+  margin-bottom: 18rem;
+  transform: translateX(-50%);
+  padding: 5px 9px;
+  border: 1px solid #303030;
+  box-shadow: 2px 4px 20px rgba(48, 48, 48, 0.15);
+  border-radius: 3px;
+  display: block;
+  background-color: #fff;
+  color: #303030; }
 
 form span {
   color: red; }

@@ -15,7 +15,7 @@
         <?php echo "Posted " . get_the_date() . " in " . get_the_category_list(', '); ?>
       </div>
       <div class="blog__content">
-        <?php the_excerpt(); ?>
+        <?php echo wp_trim_words(get_the_content(), 28); ?> <a href="<?php echo get_the_permalink(); ?>">Read more...</a>
       </div>
       <div class="blog__meta blog__meta--bottom">
         <?php echo "<strong>Tags:</strong> " . get_the_tag_list(' '); ?>

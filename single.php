@@ -16,10 +16,10 @@
         <?php echo "Posted " . get_the_date() . " in " . get_the_category_list(', '); ?>
       </div>
       <div class="blog__content">
-        <?php the_excerpt(); ?>
+        <?php the_content() ?>
       </div>
       <div class="blog__meta blog__meta--bottom">
-        <?php echo "<strong>Tags:</strong> " . get_the_tag_list(' '); ?>
+        <?php echo "<strong>Tags:</strong> " . get_the_tag_list(', '); ?>
       </div>
     </div><!-- .blog__post -->
     <br />
