@@ -60,64 +60,64 @@
     }
     else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
 
-
-
 ?>
-
 
 <?php get_header(); ?>
 
 <?php get_template_part('template-parts/sidebar'); ?>
 
 
-<div class="bg-image">
 
-  <h1 class="faux-center">CONTACT</h1>
+<div class="static-background">
+  <div class="bg-image">
+    <div class="vertical-space-small"></div>
+    <h1 class="faux-center">CONTACT</h1>
 
-  <?php echo $response; ?>
-  <form class="contact-form" action="<?php the_permalink(); ?>" method="post">
+    <?php echo $response; ?>
+    <form class="contact-form" action="<?php the_permalink(); ?>" method="post">
 
-    <input
-      class="field field__standard field__standard--name"
-      type="text"
-      autocomplete="name"
-      placeholder="Your Name"
-      name="message_name"
-      value="<?php echo esc_attr($_POST['message_name']); ?>"
-    />
-    <br />
+      <input
+        class="field field__standard field__standard--name"
+        type="text"
+        autocomplete="name"
+        placeholder="Your Name"
+        name="message_name"
+        value="<?php echo esc_attr($_POST['message_name']); ?>"
+      />
+      <br />
 
-    <input
-      class="field field__standard field__standard--email"
-      type="email"
-      autocomplete="email"
-      placeholder="Email Address"
-      name="message_email"
-      value="<?php echo esc_attr($_POST['message_email']); ?>"
-    />
-    <br />
+      <input
+        class="field field__standard field__standard--email"
+        type="email"
+        autocomplete="email"
+        placeholder="Email Address"
+        name="message_email"
+        value="<?php echo esc_attr($_POST['message_email']); ?>"
+      />
+      <br />
 
-    <textarea
-      class="field field__textarea" name="message_text" placeholder="Enter your message here..."><?php echo esc_textarea($_POST['message_text']); ?></textarea>
-    <br />
+      <textarea
+        class="field field__textarea" name="message_text" placeholder="Enter your message here..."><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+      <br />
 
-    <div class="challenge__row">
-      <p class="challenge__text">
-        <label for="message_human">Human? <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
-      </p>
+      <div class="challenge__row">
+        <p class="challenge__text">
+          <label for="message_human">Human? <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
+        </p>
 
-      <button
-        type="submit"
-        name="button"
-        class="btn btn-raise right">
-        Submit
-      </button>
-    </div>
+        <button
+          type="submit"
+          name="button"
+          class="btn btn-raise right">
+          Submit
+        </button>
+      </div>
 
-    <input type="hidden" name="submitted" value="1">
+      <input type="hidden" name="submitted" value="1">
 
-  </form>
+    </form>
 
+  </div>
 </div>
 
 

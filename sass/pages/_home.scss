@@ -30,12 +30,14 @@ body {
     // z-index: 50;
     @include respond(phone) {
       font-size: 4rem;
+      margin-top: 8%;
     }
     @include respond(tab-port) {
       font-size: 8rem;
+      margin-top: 8%;
     }
     @include respond(tab-land) {
-      font-size: 6rem;
+      font-size: 8rem;
     }
   }
   &__subheadline {
@@ -50,7 +52,7 @@ body {
       font-size: 2rem;
     }
     @include respond(tab-port) {
-      font-size: 3rem;
+      font-size: 4rem;
     }
     @include respond(tab-land) {
       font-size: 5rem;

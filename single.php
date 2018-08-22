@@ -19,7 +19,7 @@
         <?php the_content() ?>
       </div>
       <div class="blog__meta blog__meta--bottom">
-        <?php echo "<strong>Tags:</strong> " . get_the_tag_list(', '); ?>
+        <?php the_tags(); ?>
       </div>
     </div><!-- .blog__post -->
     <br />

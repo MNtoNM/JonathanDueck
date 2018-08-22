@@ -146,12 +146,14 @@ h2 {
   @media (max-width: 37.5em) {
     .btn {
       display: block;
-      margin-bottom: 2rem; } }
+      width: 50%;
+      margin: 2rem auto; } }
   .btn-group {
     margin-left: calc(50% + 3.7rem);
     transform: translateX(-50%);
     text-align: center;
     position: relative;
+    width: 100%;
     float: left; }
     .btn-group::after {
       content: "";
@@ -166,7 +168,7 @@ h2 {
     box-shadow: 2px 4px 20px rgba(48, 48, 48, 0.15); }
 
 .contact-form {
-  position: absolute;
+  position: relative;
   top: 35%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -231,14 +233,16 @@ h2 {
   text-align: center;
   position: relative;
   margin-left: calc(50% + 5rem);
-  margin-bottom: 18rem;
+  margin-bottom: 5rem;
+  bottom: -2rem;
   transform: translateX(-50%);
   padding: 5px 9px;
   border: 1px solid red;
   color: red;
   background-color: #fff;
   border-radius: 3px;
-  display: block; }
+  display: block;
+  box-shadow: 2px 4px 20px rgba(48, 48, 48, 0.15); }
   @media (max-width: 37.5em) {
     .error {
       font-size: 1.5rem; } }
@@ -290,7 +294,8 @@ form span {
   position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 3; }
   .sidebar a {
     color: #eee; }
     .sidebar a:hover {
@@ -318,19 +323,19 @@ form span {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 0rem; }
+      margin-right: 10rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 0rem) / 2); }
+    width: calc((100% - 10rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 0rem) / 3); }
+    width: calc((100% - 2 * 10rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 0rem) / 3) + 0rem); }
+    width: calc(2 * ((100% - 2 * 10rem) / 3) + 10rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 0rem) / 4); }
+    width: calc((100% - 3 * 10rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 0rem) / 4) + 0rem); }
+    width: calc(2 * ((100% - 3 * 10rem) / 4) + 10rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 0rem) / 4) + 2 * 0rem); }
+    width: calc(3 * ((100% - 3 * 10rem) / 4) + 2 * 10rem); }
 
 .fa {
   font-size: 3rem;
@@ -414,14 +419,20 @@ form span {
   position: relative;
   top: 1rem; }
 
+.static-background {
+  background: no-repeat center center fixed url("assets/images/macbook-keyboard-still-min.png");
+  background-size: cover;
+  position: relative;
+  z-index: 1; }
+
 .bg-image {
-  width: 100%;
-  margin-top: -20rem;
-  position: fixed;
+  position: relative;
+  width: 100vw;
+  background-repeat: no-repeat;
+  margin-top: -15rem;
   top: 10rem;
   z-index: -10;
-  padding: 14rem 0 50rem 0;
-  background: url("assets/images/macbook-keyboard-still-min.png"); }
+  padding: 14rem 0 50rem 0; }
 
 .right {
   position: absolute;
@@ -450,13 +461,15 @@ body {
     animation: fadeIn 2s 0.3s backwards; }
     @media (max-width: 37.5em) {
       .home__headline {
-        font-size: 4rem; } }
+        font-size: 4rem;
+        margin-top: 8%; } }
     @media (max-width: 56.25em) and (min-width: 37.6em) {
       .home__headline {
-        font-size: 8rem; } }
+        font-size: 8rem;
+        margin-top: 8%; } }
     @media (max-width: 75em) and (min-width: 56.26em) {
       .home__headline {
-        font-size: 6rem; } }
+        font-size: 8rem; } }
   .home__subheadline {
     margin-left: 5rem;
     width: 100%;
@@ -468,7 +481,7 @@ body {
         font-size: 2rem; } }
     @media (max-width: 56.25em) and (min-width: 37.6em) {
       .home__subheadline {
-        font-size: 3rem; } }
+        font-size: 4rem; } }
     @media (max-width: 75em) and (min-width: 56.26em) {
       .home__subheadline {
         font-size: 5rem; } }
@@ -487,11 +500,25 @@ video {
   opacity: 0.3; }
 
 .project-tile {
-  max-width: 50rem;
+  width: 30rem;
+  height: 30rem;
   position: relative;
-  display: inline-block;
-  border-radius: 2rem;
+  display: block;
+  border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(48, 48, 48, 0.45); }
+  @media (max-width: 37.5em) {
+    .project-tile {
+      width: 20rem;
+      height: 20rem; } }
+  @media (max-width: 56.25em) and (min-width: 37.6em) {
+    .project-tile {
+      width: 30rem;
+      height: 30rem; } }
+  @media (max-width: 75em) and (min-width: 56.26em) {
+    .project-tile {
+      width: 30rem;
+      height: 30rem;
+      margin: 0 5rem; } }
   .project-tile:hover {
     animation: tilePop 0.5s;
     animation-fill-mode: forwards;
@@ -499,6 +526,7 @@ video {
 
 .project-row {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 5rem; }
+  margin-left: 50%;
+  transform: translateX(calc(-50% - 0rem));
+  margin-top: 5rem;
+  display: block; }

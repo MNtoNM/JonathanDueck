@@ -4,6 +4,7 @@
 <?php get_template_part('template-parts/sidebar'); ?>
 
 <div class="blog__container">
+    <div class="vertical-space-small"></div>
 <h1> Posts About <?php echo single_cat_title('', false); ?></h1>
 <?php while(have_posts()) {
   the_post(); ?>

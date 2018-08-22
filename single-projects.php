@@ -4,7 +4,7 @@
 
 
 <div class="bg-image">
-  <div class="vertical-space-medium"></div>
+  <div class="vertical-space-small"></div>
   <h1><?php the_title(); ?></h1>
   <p><?php the_content(); ?></p>
 </div>

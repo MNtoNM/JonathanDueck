@@ -1,18 +1,13 @@
 .contact-form {
-  position: absolute;
+  position: relative;
   top: 35%;
   // left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-left: calc(50% + 5rem;);
-
   display: block;
   max-width: 75%;
-  // animation: contactSlide 600ms;
-  // animation-delay: 600ms;
-  // animation-fill-mode: backwards;
-  // transform: translateX(calc(-50% + 100px));
-  // margin-left: 50%;
+
   @include respond(phone) {
     top: 30%;
   }
@@ -82,14 +77,15 @@
 
 // Success, Error css
 .error {
-  // display: none;
+
   font-size: 4rem;
   padding: 3rem;
   margin: 0 auto;
   text-align: center;
   position: relative;
   margin-left: calc(50% + 5rem);
-  margin-bottom: 18rem;
+  margin-bottom: 5rem;
+  bottom: -2rem;
   transform: translateX(-50%);
   padding: 5px 9px;
   border: 1px solid red;
@@ -97,6 +93,8 @@
   background-color: $color-white;
   border-radius: 3px;
   display: block;
+  box-shadow: 2px 4px 20px rgba($color-black, .15);
+
 
   @include respond(phone) {
     font-size: 1.5rem;
