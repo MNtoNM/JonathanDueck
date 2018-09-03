@@ -2,10 +2,8 @@
 
 <?php get_template_part('template-parts/sidebar'); ?>
 
-<div class="static-background">
-  <div class="bg-image">
-    <div class="vertical-space-small"></div>
-    <h1 class="faux-center">PROJECTS</h1>
+
+    <div class="vertical-space-medium"></div>
 
     <?php
       $query = new WP_Query(
@@ -17,27 +15,31 @@
       );
     ?>
 
-    <div class="row project-row">
-      <ul>
-        <?php
-          while ( $query -> have_posts() ) {
-            $query -> the_post(); ?>
-
-              <div class="col-1-of-3">
-                  <a href="<?php echo get_permalink( $id = 0, $leavename = false ) ?>">
-                    <?php the_post_thumbnail( $size="medium", array('class' => 'project-tile', 'data-id' => 'post-' . get_the_id() )); ?>
-                  </a>
-              </div>
-
+    <!-- <div class="container"> -->
+      <div class="single-project__body">
+        <h1 class="heading">PROJECTS</h1>
+        <div class="vertical-space-small"></div>
+        <ul>
           <?php
-            wp_reset_query();
-            }
-           ?>
-        </ul>
-      </div>
-    </div>
+            while ( $query -> have_posts() ) {
+              $query -> the_post(); ?>
+
+                <div class="">
+                    <a href="<?php echo get_permalink( $id = 0, $leavename = false ) ?>">
+                      <?php the_post_thumbnail( $size="medium", array('class' => 'project-tile', 'data-id' => 'post-' . get_the_id() )); ?>
+                    </a>
+                </div>
+
+            <?php
+              wp_reset_query();
+              }
+             ?>
+          </ul>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
 
     <div class="vertical-space-medium"></div>
-  </div>
+  <!-- </div> -->
 
 <?php get_footer();

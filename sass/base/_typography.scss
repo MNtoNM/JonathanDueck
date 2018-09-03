@@ -9,6 +9,21 @@ h1 {
   color: $color-white;
   letter-spacing: 0.05em;
   padding-bottom: 2rem;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.heading {
+  position: relative;
+  font-size: 9rem;
+  margin: 0 auto;
+  text-align: center;
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
@@ -17,4 +32,9 @@ h2 {
   font-size: 3rem;
   color: $color-white;
   letter-spacing: 0.05em;
+}
+
+#nav-github {
+  font-size: 3.75rem;
+  left: -0.35rem;
 }

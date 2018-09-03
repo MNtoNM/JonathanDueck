@@ -28,7 +28,7 @@ function jd_project_post_type() {
 
 			'labels'              => $labels,
 			// Adding Support for the Post type
-			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'page-attributes', 'revisions', 'custom-fields'),
 			/*
 			* Hierarchical: Like Pages, can have parents or children.
 			* Non Hierachical: Like Posts, can't have parents or childs.

@@ -5,13 +5,6 @@ body {
   background-color: gray;
 }
 
-.container {
-  position: relative;
-  padding-top: 10%;
-  z-index: -300;
-  // width: 100vw;
-}
-
 .home {
   color: $color-white;
   font-family: 'Belgrano';
@@ -29,7 +22,7 @@ body {
     animation: fadeIn 2s 0.3s backwards;
     // z-index: 50;
     @include respond(phone) {
-      font-size: 4rem;
+      font-size: 3rem;
       margin-top: 8%;
     }
     @include respond(tab-port) {

@@ -1,9 +1,8 @@
-
 <?php get_header(); ?>
-
 <?php get_template_part('template-parts/sidebar'); ?>
 
-<div class="blog__container">
+<div class="projects__body">
+<div class="single-project-content single-project-content--transparent">
   <a class="return-to-blog" href="<?php echo site_url('/blog'); ?>">&larr; Back to All Posts</a>
 
 <?php while(have_posts()) {
@@ -24,5 +23,6 @@
     </div><!-- .blog__post -->
     <br />
   <?php } ?>
-</div><!-- .blog__container -->
+</div><!-- .single-projects-content -->
+</div>
 <?php get_footer(); ?>

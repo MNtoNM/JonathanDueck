@@ -13,4 +13,16 @@
     <?php endif; ?>
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+
+
+  <?php
+    global $wp_query;
+    $pagename = $wp_query->queried_object->post_name;
+  ?>
+
+  <?php
+    // if(!is_front_page()) { ?>
+    <body <?php body_class('bkgd-image'); ?>>
+    <?php // } else { ?>
+    <!-- <body <?php // body_class(''); ?>> -->
+  <?php // } ?>

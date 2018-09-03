@@ -1,16 +1,22 @@
 .contact-form {
-  position: relative;
-  top: 35%;
-  // left: 50%;
+  position: absolute;
+  left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  margin-left: calc(50% + 5rem;);
-  display: block;
-  max-width: 75%;
-
-  @include respond(phone) {
-    top: 30%;
-  }
+  // top: 35%;
+  // margin-left: 50%;
+  // margin: 0 auto;
+  // display: block;
+  // max-width: 75%;
+  //
+  // @include respond(phone) {
+  //   top: 30%;
+  //   margin-left: 45%;
+  // }
+  // @include respond(tab-port) {
+  //   // top: 30%;
+  //   margin-left: 45%;
+  // }
 }
 
 .field {
@@ -75,52 +81,48 @@
   }
 }
 
-// Success, Error css
-.error {
-
-  font-size: 4rem;
-  padding: 3rem;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  margin-left: calc(50% + 5rem);
-  margin-bottom: 5rem;
-  bottom: -2rem;
-  transform: translateX(-50%);
-  padding: 5px 9px;
-  border: 1px solid red;
-  color: red;
-  background-color: $color-white;
+.validation {
   border-radius: 3px;
   display: block;
+  background-color: $color-white;
   box-shadow: 2px 4px 20px rgba($color-black, .15);
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 auto;
+  margin-left: calc(50% + 5rem);
+  transform: translateX(-50%);
+  margin-left: 50%;
 
 
   @include respond(phone) {
-    font-size: 1.5rem;
+    width: 90%;
+    font-size: 2rem;
+    margin-left: 50%;
   }
-}
+  @include respond(tab-port) {
+    margin-left: 50%;
+  }
+  @include respond(tab-land) {
+    margin-left: 50%;
 
-.success{
-  padding: 5px 9px;
-  border: 1px solid green;
-  color: green;
-  border-radius: 3px;
-  font-size: 4rem;
-  padding: 3rem;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  margin-left: calc(50% + 5rem);
-  margin-bottom: 18rem;
-  transform: translateX(-50%);
-  padding: 5px 9px;
-  border: 1px solid $color-black;
-  box-shadow: 2px 4px 20px rgba($color-black, .15);
-  border-radius: 3px;
-  display: block;
-  background-color: $color-white;
-  color: $color-black;
+  }
+
+  &--success {
+    color: $color-black;
+    color: green;
+    margin-bottom: 18rem;
+    border: 1px solid green;
+    padding: 3rem;
+    padding: 5px 9px;
+  }
+  &--error {
+    color: red;
+    border: 1px solid red;
+    padding: 5px 9px;
+    margin-bottom: 5rem;
+    bottom: -2rem;
+  }
 }
 
 form span{
@@ -137,7 +139,7 @@ form span{
 }
 
 .faux-center {
-  position: relative;
-  margin-left: calc(50% + 3.5rem);
-  transform: translateX(-50%);
+  // position: relative;
+  // margin-left: calc(50% + 3.5rem);
+  // transform: translateX(-50%);
 }

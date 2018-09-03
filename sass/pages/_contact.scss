@@ -1,25 +1,18 @@
-.static-background {
-  background: no-repeat center center fixed url('assets/images/macbook-keyboard-still-min.png');
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
+.contact__body {
+  position: absolute;
+  width: calc(100% - 9rem);
+  right: 0;
 
-.bg-image {
-  position: relative;
-  width: 100vw;
-  // background-position: bottom;
-  background-repeat: no-repeat;
-  margin-top: -15rem;
-  // position: fixed;
-  top: 10rem;
-  z-index: -10;
-  padding: 14rem 0 50rem 0;
+
 }
 
 .right {
   position: absolute;
   display: inline-block;
-  margin: 2.5rem 3rem 0;
+  margin-top: 2.25rem;
+  margin-left: 15rem;
+  @include respond(phone) {
+    margin-left: 2rem;
+  }
 
 }

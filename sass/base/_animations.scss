@@ -54,12 +54,15 @@
     -webkit-transform: scale(1.0);
     -moz-transform:    scale(1.0);
     -o-transform:      scale(1.0);
+
   }
   20% {
     transform:         scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform:    scale(1.1);
     -o-transform:      scale(1.1);
+
+
   }
   100% {
     transform:         scale(1);
@@ -85,17 +88,17 @@
   }
 }
 
-@keyframes hover {
-  0% {
-    transform: translateY(-7px);
-  }
-  50% {
-    transform: translateY(7px);
-  }
-  100% {
-    transform: translateY(-7px);
-  }
-}
+// @keyframes hover {
+//   0% {
+//     transform: translateY(-7px);
+//   }
+//   50% {
+//     transform: translateY(7px);
+//   }
+//   100% {
+//     transform: translateY(-7px);
+//   }
+// }
 
 @keyframes fadeIn {
   0% {

@@ -1,12 +1,6 @@
-    <footer class="site-footer">
-      <nav class="nav-list">
-        <?php
-          // wp_nav_menu(array(
-          //   'theme_location' => 'footerLocationOne'
-          // ));
-        ?>
-      </nav>
-    </footer>
+    <!-- <footer class="site-footer">
+      ©2018 JonathanDueck.com
+    </footer> -->
     <?php wp_footer(); ?>
   </body>
 </html>

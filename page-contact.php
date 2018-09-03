@@ -7,8 +7,8 @@
   function my_contact_form_generate_response($type, $message){
     global $response;
 
-    if($type == "success") $response = "<div class='success'>{$message}</div>";
-    else $response = "<div class='error'>{$message}</div>";
+    if($type == "success") $response = "<div class='validation validation--success'>{$message}</div>";
+    else $response = "<div class='validation validation--error'>{$message}</div>";
   }
 
 // VARIABLES
@@ -64,61 +64,62 @@
 
 <?php get_header(); ?>
 
+<div class="">
 <?php get_template_part('template-parts/sidebar'); ?>
 
 
+      <div class="container contact__body">
+      <div class="vertical-space-small"></div>
 
-<div class="static-background">
-  <div class="bg-image">
-    <div class="vertical-space-small"></div>
-    <h1 class="faux-center">CONTACT</h1>
+      <?php echo $response; ?>
+      <form class="contact-form" action="<?php the_permalink(); ?>" method="post">
 
-    <?php echo $response; ?>
-    <form class="contact-form" action="<?php the_permalink(); ?>" method="post">
+        <h1 class="heading">CONTACT</h1>
+        <input
+          class="field field__standard field__standard--name"
+          type="text"
+          autocomplete="name"
+          placeholder="Your Name"
+          name="message_name"
+          value="<?php echo esc_attr($_POST['message_name']); ?>"
+        />
+        <br />
 
-      <input
-        class="field field__standard field__standard--name"
-        type="text"
-        autocomplete="name"
-        placeholder="Your Name"
-        name="message_name"
-        value="<?php echo esc_attr($_POST['message_name']); ?>"
-      />
-      <br />
+        <input
+          class="field field__standard field__standard--email"
+          type="email"
+          autocomplete="email"
+          placeholder="Email Address"
+          name="message_email"
+          value="<?php echo esc_attr($_POST['message_email']); ?>"
+        />
+        <br />
 
-      <input
-        class="field field__standard field__standard--email"
-        type="email"
-        autocomplete="email"
-        placeholder="Email Address"
-        name="message_email"
-        value="<?php echo esc_attr($_POST['message_email']); ?>"
-      />
-      <br />
+        <textarea
+          class="field field__textarea" name="message_text" placeholder="Enter your message here..."><?php echo esc_textarea($_POST['message_text']); ?></textarea>
+        <br />
 
-      <textarea
-        class="field field__textarea" name="message_text" placeholder="Enter your message here..."><?php echo esc_textarea($_POST['message_text']); ?></textarea>
-      <br />
+        <div class="challenge__row">
+          <p class="challenge__text">
+            <label for="message_human">Human? <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
+          </p>
 
-      <div class="challenge__row">
-        <p class="challenge__text">
-          <label for="message_human">Human? <span>*</span> <br><input type="text" class="contact__challenge" name="message_human"> + 3 = 5</label>
-        </p>
+          <button
+            type="submit"
+            name="button"
+            class="btn btn-raise right">
+            Submit
+          </button>
+        </div>
 
-        <button
-          type="submit"
-          name="button"
-          class="btn btn-raise right">
-          Submit
-        </button>
-      </div>
+        <input type="hidden" name="submitted" value="1">
 
-      <input type="hidden" name="submitted" value="1">
+      </form>
+      <div class="vertical-space-big"></div>
 
-    </form>
+    </div>
 
-  </div>
+
+
 </div>
-
-
 <?php get_footer(); ?>

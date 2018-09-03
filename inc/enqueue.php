@@ -7,7 +7,6 @@ function jd_portfolio_files() {
   	wp_enqueue_script( 'jquery' );
 
   wp_enqueue_script('icons-js', get_theme_file_uri('/js/icons.js'), array('jquery'), microtime(), true);
-  wp_enqueue_script('project-tile-click-js', get_theme_file_uri('/js/project-tile-click.js', array(), '1.0', true));
   wp_enqueue_style('google-custom-fonts', '//fonts.googleapis.com/css?family=Belgrano');
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', null, microtime());
   wp_enqueue_style('firestarter_main_styles', get_stylesheet_uri());

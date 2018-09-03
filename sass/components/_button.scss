@@ -13,8 +13,8 @@
   @include respond(phone) {
     display: block;
     // margin-bottom: 2rem;
-    width: 50%;
     margin: 2rem auto;
+    width: 50%;
   }
 
   &-group {
